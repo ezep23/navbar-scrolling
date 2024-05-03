@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Navbar responsive */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex; 
+    justify-content: space-around;
+    background-color: #000;
+    transition: 0.7s;
+    padding: 30px 20px;
+    z-index: 10; /* Linea infravalorada -> se utiliza para sobreponer elementos */
+}
+
+header.abajo{
+    background: #fff;
+    padding: 15px 20px;
+}
+
+header .logo{
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 1.5s;
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li{
+    list-style: none;
+}
+
+nav a{
+    position: relative;
+    font-family: helvetica;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px; /* Linea infravalorada */
+    font-weight: 600;
+    transition: 0.7s;
+}
+
+header.abajo .logo,
+header.abajo li a{
+    color: #000;
+}
+
+header.abajo .abrir-menu i{
+    color: #000;
+}
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+.seccion{
+   height: 100%;
+   width: 100%;
+}
+
+
+/* Mediaqueries navbar */
+
+@media screen and (max-width: 550px) {  
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: #fff;
+    }
+
+    .cerrar-menu {
+        color: #ececec;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding: 25% 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a {
+        color: #ecececec;
+    }
+
+    #nav.abajo{
+        background-color: #dfdfdf;
+        transition: 1.5s;
+    }
+    
+    #nav.abajo i{
+        color: #000;
+    }
+
+}
+
+
