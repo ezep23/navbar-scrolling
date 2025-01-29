@@ -77,11 +77,16 @@ header.abajo .abrir-menu i{
     display: none;
 }
 
-.seccion{
-   height: 100%;
-   width: 100%;
+#seccion-1{
+    text-align: center;
+    padding: 200px;
+    background-color: rgb(255, 0, 0);
 }
-
+#seccion-2{
+    text-align: center;
+    padding: 200px;
+    background-color: rgb(255, 128, 0);
+}
 
 /* Mediaqueries navbar */
 
