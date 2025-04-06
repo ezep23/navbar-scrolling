@@ -1,40 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Metadatos -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="./src/style.css">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/style.css">
+  <title>Administración</title>
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">LOGO</a>
-        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
-        <nav class="nav" id="nav">
-            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
-            <ul class="nav-list">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Servicio</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="seccion-1">
-        <p>Boca es el mejor equipo del mundo</p>
+
+  <header>
+    <nav>
+      <h1>Administración</h1>
+      <button id="open-modal"> + </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="section">
+      <div class="table-container">
+        <h2>Tabla de contenido</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Tipo</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
+              <th>Imagen</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="body-table"></tbody>
+        </table>
+      </div>
+     </div>
     </section>
-    <section id="seccion-2">
-        <p>Boca es el mejor equipo del mundo</p>
-    </section>
-    <!-- Script JS-->
-    <script src="./src/index.js"></script>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+          <span id="close-modal" class="close-modal">&times;</span>
+          <div class="form-container">
+            <h3>AGREGAR NUEVO PRODUCTO</h3>
+            <form id="form-product">
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" required />
+              </div>
+              <div class="form-group">
+                <label for="type">Tipo</label>
+                <input type="text" id="type" required />
+              </div>
+              <div class="form-group">
+                <label for="quantity">Cantidad</label>
+                <input type="number" id="quantity" required />
+              </div>
+              <div class="form-group">
+                <label for="price">Precio</label>
+                <input type="number" id="price" required />
+              </div>
+              <div class="form-group">
+                <label for="image">URL</label>
+                <input type="text" id="image" placeholder="URL from the image" required />
+              </div>
+              <div class="form-actions">
+                <button id="submitNew" type="submit">Guardar</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+          <span id="close-modal" class="close-modal">&times;</span>
+          <div class="form-container">
+            <h3>AGREGAR NUEVO PRODUCTO</h3>
+            <form id="form-product">
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" required />
+              </div>
+              <div class="form-group">
+                <label for="type">Tipo</label>
+                <input type="text" id="type" required />
+              </div>
+              <div class="form-group">
+                <label for="quantity">Cantidad</label>
+                <input type="number" id="quantity" required />
+              </div>
+              <div class="form-group">
+                <label for="price">Precio</label>
+                <input type="number" id="price" required />
+              </div>
+              <div class="form-group">
+                <label for="image">URL</label>
+                <input type="text" id="image" placeholder="URL from the image" required />
+              </div>
+              <div class="form-actions">
+                <button id="submitEdit" type="submit">Guardar</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <h3> Creado por ezep23 - 2025</h3>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./src/Main.js" type="module"></script>
 </body>
 </html>
